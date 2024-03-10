@@ -1,0 +1,22 @@
+@use "../custom" as *;
+
+.btn-learn-more{
+    font-size: 1.2rem;
+    color: $white;
+    border-radius: 0;
+    padding-inline: 2rem;
+    padding-block: 0.4rem;
+    @include media-breakpoint-down(lg) {
+        font-size: 1rem;
+        padding-inline: 1.2rem;
+    }
+    @include media-breakpoint-down(md) {
+        font-size: 0.8rem;
+        padding-inline: 1rem;
+    }
+    @include media-breakpoint-down(sm) {
+        font-size: 0.8rem;
+        padding-inline: 0.8rem;
+    }
+}
+

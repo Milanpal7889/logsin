@@ -1,0 +1,27 @@
+@use "../custom" as *;
+
+
+.custom-footer-list-header{
+    color: $light;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    width: fit-content;
+    &:after {
+        content: "";
+        width: 100%;
+        height: 0.2rem;
+        display: block;
+        background-color: $primary;
+      }
+}
+.custom-footer-link-list{
+    display: block;
+}
+.custom-footer-link{
+    color: $primary;
+    text-decoration: none;
+    padding: 0.2rem;
+    &:hover{
+        color: $white;
+    }
+}

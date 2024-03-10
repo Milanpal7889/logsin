@@ -1,0 +1,50 @@
+@use "../custom" as *;
+
+
+// section heading line
+.custom-section-heading {
+    font-size: 3rem;
+    width: fit-content;
+    margin: 0 auto;
+  &:after {
+    content: "";
+    width: 90%;
+    height: 0.3rem;
+    display: block;
+    margin: 0.5rem auto;
+    background-color: $primary;
+  }
+  @include media-breakpoint-down(lg) {
+    font-size: 2.5rem;
+  }
+  @include media-breakpoint-down(md) {
+    font-size: 2rem;
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: 1.5rem;
+  }
+}
+
+// card title
+.custom-card-title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    @include media-breakpoint-down(lg) {
+      font-size: 1.6rem;
+    }
+    @include media-breakpoint-down(md) {
+      font-size: 1.4rem;
+    }
+}
+
+// card text
+.custom-card-text {
+    font-size: 1rem;
+    color: $secondary;
+    @include media-breakpoint-down(lg) {
+      font-size: 0.8rem;
+    }
+}
+.blank-dots{
+  height: 5rem;
+}

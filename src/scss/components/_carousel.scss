@@ -1,0 +1,56 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.custom-carousel {
+  .carousel-inner {
+    .carousel-item {
+      position: relative;
+      min-height: 100vh;
+      h1 {
+        @include absoluteCenter;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba($black, 0.7);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        font-size: 6rem;
+        font-weight: 600;
+        color: $white;
+        text-shadow: 0.1rem 0.1rem 0.3rem rgba($black, 0.4);
+      }
+    }
+  }
+  @include media-breakpoint-down(xl) {
+    .carousel-inner {
+      .carousel-item {
+        background-size: contain;
+        h1 {
+          font-size: 4rem;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    .carousel-inner {
+      .carousel-item {
+        background-size: cover;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .carousel-inner {
+      .carousel-item {
+        min-height: 60vh;
+        h1 {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,32 @@
+@use "../custom" as *;
+
+.custom-testimonials-heading {
+  font-size: 2.5rem;
+  text-align: left;
+  margin-block: 3rem;
+  &:after {
+    content: "";
+    width: 18%;
+    height: 0.2rem;
+    display: block;
+    background-color: $primary;
+  }
+  @include media-breakpoint-down(lg) {
+    font-size: 2.5rem;
+    text-align: center;
+    &:after{
+      margin: 0 auto;
+      width: 25%;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    font-size: 2rem;
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: 1.5rem;
+  }
+}
+.custom-testimonial-slides{
+    margin-block: 2rem;
+}
+

@@ -1,0 +1,78 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.image-comp-container {
+  border-bottom: 2px solid $secondary;
+  margin-bottom: 1rem;
+}
+
+.custom-image-comp {
+  position: relative;
+  h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba($black, 0.7);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 3rem;
+    font-weight: 600;
+    color: $white;
+    text-shadow: 0.1rem 0.1rem 0.3rem rgba($black, 0.4);
+
+    @include media-breakpoint-down(sm) {
+      top: 40%;
+      font-size: 2rem;
+    }
+  }
+  p {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: $white;
+    text-shadow: 0.1rem 0.1rem 0.3rem rgba($black, 0.4);
+    @include media-breakpoint-down(sm) {
+      font-size: 1rem;
+      text-align: center;
+      top: 70%;
+    }
+  }
+}
+
+.fa-chevron-right {
+  width: 8px;
+  margin-inline: 1rem;
+  @include media-breakpoint-down(sm) {
+    margin-inline: 0.5rem;
+    font-size: 0.8rem;
+  }
+}
+
+.custom-image-comp-nav {
+  a {
+    &:hover {
+      color: $primary;
+      cursor: pointer;
+    }
+    &:active {
+      color: $primary;
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: 0.8rem;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@use "../custom" as *;
+
+.custom-card {
+    box-shadow: 0 0.5rem 1rem rgba($black, 0.1);
+    div{
+        border: 0.1rem solid rgba($black, 0.3);
+        text-align: center;
+        div{
+            border: none;
+        }
+    }
+    @include media-breakpoint-down(lg) {
+        div{
+            margin-block: 0.5rem;
+        }
+    }
+}
